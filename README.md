@@ -1,1 +1,62 @@
-# springboot-ecommerce
+# Springboot e-commerce
+## Descriere generală
+Acest proiect a fost realizat în cadrul materiei Aplicații Web pentru Baze de Date și reprezintă implementarea unui sistem de e-commerce folosind arhitectura de microservicii.
+
+Proiectul este construit în Spring Boot și utilizează MySQL pentru stocarea datelor. Am ales să împart aplicația în două microservicii independente:
+
+User Service – gestionează autentificarea și înregistrarea utilizatorilor
+
+Product Service – gestionează produsele disponibile în magazin
+
+Am folosit Swagger UI pentru documentarea și testarea API-urilor într-un mod vizual și intuitiv.
+
+## Tehnologii folosite
+
+- Java 21
+- Spring Boot
+- Spring Data JPA
+- MySQL
+- Swagger (OpenAPI)
+- Maven
+
+## Structura proiectului
+
+Proiectul conține două microservicii independente, fiecare având propria structură de tip Controller – Service – Repository – Model – DTO – Mapper – Exception – Config.
+
+### Product Service
+
+- controller – gestioneaza request-urile pentru produse si review-uri (ProductController, ReviewController)
+<img width="1872" height="1560" alt="image" src="https://github.com/user-attachments/assets/706b82e8-37f4-4931-920a-59549c2b5797" />
+
+- service – contine logica pentru produse si review-uri (ProductService, ReviewService), si trateaza exceptiile legate de acestea (de exemplu daca facem request pentru un produs ce nu exista in baza de date vom primi eroarea "Product not found with ID")
+<img width="1872" height="1560" alt="image" src="https://github.com/user-attachments/assets/ff2ac0e9-fa18-4c46-a113-408f6dc29dca" />
+
+- repository – asigura interactiunea cu baza de date cu ajutorul JpaRepository a produselor si review-urilor
+
+- model – inregistreaza entitatile Product si Review si baza de date, alaturi de "caracteristicile" care se pot inregista pentru fiecare entitate (de exemplu un produs este descris prin ID de tip Long, nume de tip String, descriere de tip String, pret de tip Double si categorie de tip String, iar pentru Review se pot vedea caracteristicile in poza de mai jos)
+<img width="1872" height="1556" alt="image" src="https://github.com/user-attachments/assets/2972eb99-7bbf-40cc-a585-358dd37383c3" />
+
+
+- dto – obiecte pentru transferul datelor intre straturi, este folosit pentru diferentiera datelor introduse de utilizator, de datele ce se salveaza in baza de date. 
+<img width="1589" height="1012" alt="image" src="https://github.com/user-attachments/assets/8a179587-34b2-46dc-8741-6ba45bdeeed6" />
+
+
+mapper – maparea dintre entitati si DTO-uri
+
+exception – tratarea erorilor
+
+### User Service
+
+controller – API-uri pentru login, register, gestionarea utilizatorilor
+
+service – logica de autentificare și validare
+
+repository – comunicarea cu baza de date pentru utilizatori
+
+model – entitățile (ex: User)
+
+dto – request/response pentru autentificare și înregistrare
+
+mapper – transformă obiecte între entități și DTO-uri
+
+exception – tratament erori specifice

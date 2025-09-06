@@ -81,4 +81,8 @@ ProductNotFoundException - trateaza eroarea unui produs ce nu exista in baza de 
 SecurityConfig - salveaza parolele harshed in baza de date, dezactiveaza protectia CSRF (Cross-Site Request Forgery) pentru a nu interfera request-urile in Swagger cu token-urile CSRF si defineste regulile de acces (la path-urile de autentificare si inregistrare are acces toata lumea, pe cand orice alt request catre aplicatie necesita autentificare)
 <img width="1834" height="896" alt="image" src="https://github.com/user-attachments/assets/e53da798-54a9-4130-b959-96bb22e00769" />
 
+## Documentarea API-urilor
+<img width="1600" height="1093" alt="image" src="https://github.com/user-attachments/assets/ee66e20e-5695-49ed-a282-8528d33c12ec" />
+
+
 

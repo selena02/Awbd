@@ -41,9 +41,16 @@ Proiectul conține două microservicii independente, fiecare având propria stru
 <img width="1589" height="1012" alt="image" src="https://github.com/user-attachments/assets/8a179587-34b2-46dc-8741-6ba45bdeeed6" />
 
 
-mapper – maparea dintre entitati si DTO-uri
+- mapper – maparea dintre entitati si DTO-uri
+<img width="2196" height="1168" alt="image" src="https://github.com/user-attachments/assets/90c4d72c-fe1c-4d59-ba53-d2c7a98b8dd4" />
 
-exception – tratarea erorilor
+
+- exception – 2 fisiere ce trateaza erori: 
+GlobalExceptionHandler - trateaza erori de tip BAD_RQUEST, UNAUTHORIZED, NOT_FOUND si INTERNAL_SERVER_ERROR 
+<img width="2734" height="1388" alt="image" src="https://github.com/user-attachments/assets/17a9844e-2c53-4809-af73-232f3fa7417c" />
+ProductNotFoundException - trateaza eroarea unui produs ce nu exista in baza de date
+<img width="1880" height="274" alt="image" src="https://github.com/user-attachments/assets/388c8234-33ba-483b-a0b4-44f6eda93061" />
+
 
 ### User Service
 

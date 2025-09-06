@@ -54,16 +54,31 @@ ProductNotFoundException - trateaza eroarea unui produs ce nu exista in baza de 
 
 ### User Service
 
-controller – API-uri pentru login, register, gestionarea utilizatorilor
+- controller – API-uri pentru login si register
+<img width="2720" height="1342" alt="image" src="https://github.com/user-attachments/assets/cd5e65ab-932b-4691-b1c5-1fd7f4595243" />
 
-service – logica de autentificare și validare
 
-repository – comunicarea cu baza de date pentru utilizatori
+- service – logica de autentificare prin token, inregistrare si validare
+<img width="2720" height="1496" alt="image" src="https://github.com/user-attachments/assets/78feec33-9a48-466b-8066-48651e118d94" />
 
-model – entitățile (ex: User)
 
-dto – request/response pentru autentificare și înregistrare
+- repository – comunicarea cu baza de date pentru utilizatori - contine fisierul UserRepository
+<img width="1834" height="410" alt="image" src="https://github.com/user-attachments/assets/992c3260-6e67-45bc-8289-2d68af5976c3" />
 
-mapper – transformă obiecte între entități și DTO-uri
 
-exception – tratament erori specifice
+- model – entitatea User alaturi de "caracteristicile" pe care aceasta le are: ID de tip Long, username de tip String, password de tip String, email de tip String, role de tip String
+<img width="1834" height="892" alt="image" src="https://github.com/user-attachments/assets/95773d78-853c-4f88-b76a-40d0d25f8686" />
+
+
+- dto – request-uri pentru autentificare si inregistrare
+
+- mapper – transforma obiecte intre entitati si DTO-uri
+<img width="1834" height="716" alt="image" src="https://github.com/user-attachments/assets/8e496a21-9803-483c-a895-e8be1bb3c7ef" />
+
+
+- config - contine 2 fisiere: JwtUtil ce genreaza un toket pentru fiecare cont de utilizator creat (in acest mod se genereaza o sesiune de utilizator autentificat)
+<img width="1834" height="822" alt="image" src="https://github.com/user-attachments/assets/46f78453-2134-4c91-8672-9bd3ddf0dc08" />
+SecurityConfig - salveaza parolele harshed in baza de date, dezactiveaza protectia CSRF (Cross-Site Request Forgery) pentru a nu interfera request-urile in Swagger cu token-urile CSRF si defineste regulile de acces (la path-urile de autentificare si inregistrare are acces toata lumea, pe cand orice alt request catre aplicatie necesita autentificare)
+<img width="1834" height="896" alt="image" src="https://github.com/user-attachments/assets/e53da798-54a9-4130-b959-96bb22e00769" />
+
+

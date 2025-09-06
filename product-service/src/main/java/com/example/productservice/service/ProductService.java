@@ -1,11 +1,11 @@
-package com.example.springbootprojectuni.service;
+package com.example.productservice.service;
 
-import com.example.springbootprojectuni.dto.ProductRequest;
-import com.example.springbootprojectuni.dto.ProductResponse;
-import com.example.springbootprojectuni.exception.ProductNotFoundException;
-import com.example.springbootprojectuni.mapper.ProductMapper;
-import com.example.springbootprojectuni.model.Product;
-import com.example.springbootprojectuni.repository.ProductRepository;
+import com.example.productservice.dto.ProductRequest;
+import com.example.productservice.dto.ProductResponse;
+import com.example.productservice.exception.ProductNotFoundException;
+import com.example.productservice.mapper.ProductMapper;
+import com.example.productservice.model.Product;
+import com.example.productservice.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

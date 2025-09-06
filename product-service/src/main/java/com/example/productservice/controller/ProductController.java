@@ -1,10 +1,10 @@
-package com.example.springbootprojectuni.controller;
+package com.example.productservice.controller;
 
-import com.example.springbootprojectuni.dto.ProductRequest;
-import com.example.springbootprojectuni.dto.ProductResponse;
-import com.example.springbootprojectuni.mapper.ProductMapper;
-import com.example.springbootprojectuni.model.Product;
-import com.example.springbootprojectuni.service.ProductService;
+import com.example.productservice.dto.ProductRequest;
+import com.example.productservice.dto.ProductResponse;
+import com.example.productservice.mapper.ProductMapper;
+import com.example.productservice.model.Product;
+import com.example.productservice.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;

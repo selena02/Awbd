@@ -84,5 +84,7 @@ SecurityConfig - salveaza parolele harshed in baza de date, dezactiveaza protect
 ## Documentarea API-urilor
 <img width="1600" height="1093" alt="image" src="https://github.com/user-attachments/assets/ee66e20e-5695-49ed-a282-8528d33c12ec" />
 
+## Schema bazei de date
+<img width="1245" height="856" alt="image" src="https://github.com/user-attachments/assets/608f7ab5-a9b1-43b4-b0ad-e78b0c41bed7" />
 
 
